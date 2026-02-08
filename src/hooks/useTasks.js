@@ -17,7 +17,7 @@ const useTasks = () => {
     }
   }, [tasks]);
 
-  const deleteTasks = useCallback(
+  const deleteTask = useCallback(
     (taskId) => {
       tasksAPI.delete(taskId).then(() => {
         setTasks(tasks.filter((task) => task.id !== taskId));
@@ -80,7 +80,7 @@ const useTasks = () => {
     searchQuery,
     newTaskInputRef,
     addTask,
-    deleteTasks,
+    deleteTask,
     deleteAllTasks,
     toggleTaskComplete,
     setNewTaskTitle,

@@ -26,7 +26,7 @@ const tasksAPI = {
   },
 
   deleteAll: (tasks) => {
-    Promise.all(tasks.map(({ id }) => tasksAPI.delete(id)));
+    return Promise.all(tasks.map(({ id }) => tasksAPI.delete(id)));
   },
 
   toggleComplete: (id, isDone) => {
